@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EPSP | Analytics</title>
+  <link rel="stylesheet" href="analytics.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Analytics</div>
+    <nav class="nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="campaigns.html">Campaigns</a>
+      <a href="templates.html">Templates</a>
+      <a href="training.html">Training</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="stats">
+      <div class="stat-card">Open Rate: <strong>72%</strong></div>
+      <div class="stat-card">Click Rate: <strong>36%</strong></div>
+      <div class="stat-card">Success Rate: <strong>18%</strong></div>
+    </section>
+
+    <section class="chart-section">
+      <h2>Campaign Performance</h2>
+      <canvas id="analyticsChart"></canvas>
+    </section>
+
+    <section class="table-section">
+      <h2>Campaign Summary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Campaign</th>
+            <th>Sent</th>
+            <th>Opened</th>
+            <th>Clicked</th>
+            <th>Reported</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HR Policy Test</td>
+            <td>100</td>
+            <td>76</td>
+            <td>32</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Fake Invoice</td>
+            <td>120</td>
+            <td>84</td>
+            <td>40</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="analytics.js"></script>
+</body>
+</html>

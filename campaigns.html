@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EPSP | Campaigns</title>
+  <link rel="stylesheet" href="campaigns.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Campaigns</div>
+    <nav class="nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="templates.html">Templates</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="training.html">Training</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="campaign-form-section">
+      <h2>Create New Campaign</h2>
+      <form id="campaignForm">
+        <input type="text" placeholder="Campaign Name" id="name" required />
+        <input type="text" placeholder="Target Group (e.g. IT)" id="group" required />
+        <select id="template" required>
+          <option value="">Select Template</option>
+          <option value="HR Policy Update">HR Policy Update</option>
+          <option value="Fake Invoice">Fake Invoice</option>
+          <option value="IT Warning">IT Warning</option>
+        </select>
+        <button type="submit">Launch Campaign</button>
+      </form>
+    </section>
+
+    <section class="campaign-list-section">
+      <h2>Existing Campaigns</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Group</th>
+            <th>Template</th>
+            <th>Created</th>
+          </tr>
+        </thead>
+        <tbody id="campaignTable">
+          <!-- JS will render rows here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="campaigns.js"></script>
+</body>
+</html>

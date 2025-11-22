@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PhishAware Dashboard</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Phish-Aware-EPSP</div>
+    <nav class="nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="campaigns.html">Campaigns</a>
+      <a href="templates.html">Templates</a> 
+      <a href="analytics.html">Analytics</a>
+      <a href="training.html">Training</a>
+    </nav>  
+  </nav>
+  <main class="container">
+    <section class="overview">
+      <div class="card"> <span>Emails Sent</span> <strong>1,240</strong></div>
+      <div class="card"> <span>Open Rate</span> <strong>72%</strong></div>
+      <div class="card"> <span>Click Rate</span> <strong>34%</strong></div>
+      <div class="card"> <span>Training Complete</span> <strong>88%</strong></div>
+    </section>
+
+    <section class="campaign">
+      <h2> Launch New Campaign</h2>
+      <form id="campaign-form">
+        <input type="text" placeholder="Campaign Name" required />
+        <input type="text" placeholder="Target Group (e.g. Marketing)" required />
+        <select required>
+          <option value="">Choose Template</option>
+          <option>Fake IT Alert</option>
+          <option>Invoice Scam</option>
+        </select>
+        <button type="submit">Send Campaign</button>
+      </form>
+    </section>
+
+    <section class="templates">
+      <h2>Templates</h2>
+      <ul class="template-list">
+        <li><span> HR Policy Update</span> <button>Edit</button></li>
+        <li><span> IT Warning</span> <button>Edit</button></li>
+        <li><span> Invoice Overdue</span> <button>Edit</button></li>
+      </ul>
+    </section>
+
+    <section class="analytics">
+      <h2>Analytics</h2>
+      <div class="chart-placeholder">[ Charts will be integrated here ]</div>
+    </section>
+  </main>
+
+  <div id="trainingModal" class="modal hidden">
+    <div class="modal-content">
+      <h3> Phishing Detected</h3>
+      <p>This was a simulated phishing email. Here's what you missed:</p>
+      <ul>
+        <li> Suspicious sender domain</li>
+        <li> Urgent language</li>
+        <li> Fake login page</li>
+      </ul>
+      <button onclick="closeModal()">Understood</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

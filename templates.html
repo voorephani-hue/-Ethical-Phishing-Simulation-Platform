@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EPSP | Templates</title>
+  <link rel="stylesheet" href="templates.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Templates</div>
+    <nav class="nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="campaigns.html">Campaigns</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="training.html">Training</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="template-form-section">
+      <h2>Create New Template</h2>
+      <form id="templateForm">
+        <input type="text" id="templateName" placeholder="Template Name" required />
+        <textarea id="templateContent" placeholder="Email Body (HTML/text)" rows="5" required></textarea>
+        <button type="submit">Add Template</button>
+      </form>
+    </section>
+
+    <section class="template-list-section">
+      <h2>Existing Templates</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Content Preview</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="templateTable">
+          <!-- JS renders rows -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="templates.js"></script>
+</body>
+</html>
